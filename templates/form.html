@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/basic.css">
+    <title>This is a form demo!</title>
+</head>
+
+<!-- form -->
+<form method="post">
+    please enter your name: <input name="name" />
+    <br/>
+    <button type="submit">Make a post request</button>
+</form>
+
+<!-- More content if a name exists -->
+{% if name %}
+<!-- Do Some Stuff -->
+<div class = "contnet"> 
+    <p>A Post request has been made!</p>
+    <p>{{ name }}</p>
+</div>
+{% endif %}
