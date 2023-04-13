@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def mainPage():
     name = "Jobey Farias"
-    return render_template('base.html', name=name, aboutMe=readDetails('static\content.txt'))
+    return render_template('base.html', name=name, aboutMe=readDetails('static\description.txt'))
     
 def readDetails(filepath):
         with open(filepath, 'r') as f:
